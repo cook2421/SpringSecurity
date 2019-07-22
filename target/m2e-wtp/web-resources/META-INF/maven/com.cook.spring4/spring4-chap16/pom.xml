@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.cook.spring4</groupId>
+  <artifactId>spring4-chap16</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>spring4-chap16</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencyManagement>
+  	<dependencies>
+	  	<dependency>
+	  	 	<groupId>org.springframework</groupId>
+	  	 	<artifactId>spring-framework-bom</artifactId>
+	  	 	<version>5.1.8.RELEASE</version>
+	  	 	<type>pom</type>
+	  	 	<scope>import</scope>
+	  	 </dependency>
+  </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+  	 <dependency>
+  	 	<groupId>org.springframework</groupId>
+  	 	<artifactId>spring-webmvc</artifactId>
+  	 </dependency>
+  	 <dependency>
+  	 	<groupId>org.springframework.security</groupId>
+  	 	<artifactId>spring-security-web</artifactId>
+  	 	<version>3.2.4.RELEASE</version>
+  	 </dependency>
+  	 <dependency>
+  	 	<groupId>org.springframework.security</groupId>
+  	 	<artifactId>spring-security-config</artifactId>
+  	 	<version>3.2.4.RELEASE</version>
+  	 </dependency>
+  	 <dependency>
+  	 	<groupId>org.springframework.security</groupId>
+  	 	<artifactId>spring-security-taglibs</artifactId>
+  	 	<version>3.2.4.RELEASE</version>
+  	 </dependency>
+  </dependencies>
+  
+  <build>
+  	<finalName>spring4-chap16</finalName>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<configuration>
+  				<source>1.7</source>
+  				<target>1.7</target>
+  				<encoding>utf-8</encoding>
+  			</configuration>
+  		</plugin>
+  		<plugin>
+  			<groupId>org.eclipse.jetty</groupId>
+  			<artifactId>jetty-maven-plugin</artifactId>
+  			<version>9.1.1.v20140108</version>
+  			<configuration>
+  				<scanIntervalSeconds>3</scanIntervalSeconds>
+  				<webApp>
+  					<contextPath>/spring4-chap16</contextPath>
+  				</webApp>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>
