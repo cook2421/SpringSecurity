@@ -15,7 +15,9 @@
 		<sec:intercept-url pattern="/**" 		  access="permitAll" />
 		
 		<sec:form-login />
+		
 		<sec:logout />
+		
 	</sec:http>	
 	
 	<sec:authentication-manager>
